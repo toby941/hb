@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, HaobinActivity!</string>
+    <string name="app_name">濠滨网</string>
+    <string name="icon1">论坛</string>
+    <string name="icon2">资讯</string>
+    <string name="icon3">直播</string>
+    <string name="icon4">爆料</string>
+    <string name="icon5">美食</string>
+    <string name="icon6">公交</string>
+    <string name="icon7">天气</string>
+    <string name="icon_default">示例</string>
+    <string name="pull_to_refresh_pull_label">下拉可以刷新...</string>
+    <string name="pull_to_refresh_release_label">松开刷新...</string>
+    <string name="pull_to_refresh_refreshing_label">刷新中...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+
+</resources>

@@ -1,0 +1,76 @@
+<RelativeLayout android:orientation="horizontal"
+	android:id="@+id/top_navigate" 
+	android:background="@drawable/news_01"
+	android:layout_width="fill_parent" 
+	android:layout_height="46dp"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<LinearLayout 
+	    
+	    android:gravity="center"
+		android:layout_gravity="center_vertical" 
+		android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true" 
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="5dip">
+	    <ImageView
+	        android:id="@+id/header_home"
+	        android:background="@drawable/news_02"
+	        android:layout_width="65dp"
+	        android:gravity="center" 
+	        android:paddingLeft="4dp" 
+			android:clickable="true" 
+			android:scaleType="fitCenter"
+			android:layout_height="30dp"  />"
+	</LinearLayout>
+	 
+	<LinearLayout android:id="@+id/header_text"
+	    android:gravity="center"
+		android:layout_gravity="center" 
+		android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		>
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:gravity="center"
+		android:layout_gravity="center_vertical" 
+		android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true" 
+		android:layout_centerVertical="true"
+		android:layout_marginRight="5dip"> 
+		
+		<ImageView
+	        android:background="@drawable/news_03"
+	        android:layout_width="38dp"
+	        android:gravity="center" 
+	        android:paddingRight="4dp" 
+			android:clickable="true" 
+			android:scaleType="fitCenter"
+			android:layout_height="30dp"  />
+	</LinearLayout>
+<LinearLayout 
+	    android:gravity="center"
+		android:layout_gravity="center_vertical" 
+		android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_centerHorizontal="true"
+		> 
+	<TextView
+	    android:layout_width="56dp"
+	    android:layout_height="30dp"
+	    android:layout_alignTop="@+id/header_home"
+	    android:layout_centerHorizontal="true"
+	    android:gravity="center"
+	    android:textSize="20sp"
+	    android:text="资讯" />
+	</LinearLayout>
+</RelativeLayout>

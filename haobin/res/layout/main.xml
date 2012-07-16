@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+      android:background="@drawable/bg"
+    android:orientation="vertical" >
+  <LinearLayout
+        android:id="@+id/linearLayout00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+     <include
+            android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_header" />
+    </LinearLayout> 
+   <LinearLayout
+       android:layout_below="@+id/linearLayout00"
+        android:id="@+id/linearLayout02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="40px"
+        android:orientation="vertical" >
+  <GridView   
+    android:id="@+id/gridView01"   
+    android:layout_width="wrap_content"   
+    android:layout_height="fill_parent"
+    android:stretchMode="columnWidth"  
+    android:gravity="center"  
+    >
+  </GridView>  
+    </LinearLayout> 
+    
+</RelativeLayout>

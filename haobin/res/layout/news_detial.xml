@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dh"
+        android:layout_width="match_parent"
+        android:layout_height="62px"
+        android:background="@drawable/news_01"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/d_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|bottom"
+            android:layout_marginLeft="10px"
+            android:layout_marginBottom="5px"
+            android:background="@drawable/news_detail_01" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.27"
+            android:gravity="center"
+            android:text="资讯"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="41px"
+            android:layout_marginRight="10px"
+            android:background="@drawable/news_detail_02_commentsbg"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="6评论" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/dh"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15px"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5px"
+                android:text="主席一弯腰 感动亿万网友"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" >
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5px"
+                android:text="2012-07-03 09:58:00 来源：新华社"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="10sp" >
+            </TextView>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divise" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.93" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:maxWidth="460px"
+                android:text="  昨日，网络上一组照片引发热议。图片拍的是在G20峰会上，主办方用贴在地板上的各国国旗来标示合影时领导人的位置。合影结束后，惟有中国国家主席胡锦涛弯腰把这面国旗贴纸捡起、细心地收了起来，从而中国国旗避免了被人踩踏。　一个拾国旗的细节，带来的是满溢的感动。
+　　\r\n  一位福建泉州的网友动情地写下：“胡主席这样小小的动作是发自内心地热爱自己的祖国，向尊敬的胡主席致敬”。
+　　\r\n  一位山东聊城的网友这样描述看到照片时的情景，“一刹那间，我的鼻子酸酸的，毕竟他也是近七旬的老人呀！中国的掌舵人！”
+　　\r\n  一位北京市海淀区网友的留言赢得了3106次的认同推荐,他是这样写的：“我弯腰了，是因为我深爱着这片土地；我流泪了，是因为我们有这么好的主席！”
+　　\r\n  一位博友则写下了一篇“不以事小而不为”的博客，其中提到“不以事小而不为，真是细微之处见精神。这一弯腰，这一幕，让人动容！”
+　　\r\n  一个躬身向下的动作，带来的是扬眉吐气的自豪。
+　　\r\n  一位铁岭的网友写道，“这一弯腰让中国人的腰更直了”，为了表达敬意，他一连用了11个感叹号。
+　　\r\n  一位湖北黄石的网友迫不及待地用手机上网，发表看法“弯腰拾起国标，起身挺起国魂”。
+　　\r\n  一位重庆市的网友留下的语句铿锵有力，“瞬间的弯腰，挺起了伟大的中国，国人为此种弯腰而自豪”。
+　　\r\n  一位上海市的网友直抒胸臆，“甚小细微之举动，捍卫国威之雄心”。"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" >
+            </TextView>
+        </ScrollView>
+         <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <ImageView 
+             android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/news_detail_04"
+            
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+   
+
+</RelativeLayout>

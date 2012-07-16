@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+      android:background="@drawable/bg"
+    android:orientation="vertical" >
+  <LinearLayout
+      android:id="@+id/news_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+     <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/normal_header" />
+    </LinearLayout> 
+
+     <LinearLayout
+         android:id="@+id/news_sub"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/news_head"
+         android:background="@drawable/menu_bg"
+         android:gravity="center" 
+         android:orientation="horizontal" >
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+               android:paddingLeft="20px"
+                android:text="副标一"
+         android:paddingRight="10px" >
+         </TextView>
+           <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="副标二" 
+              android:paddingLeft="20px"
+         android:paddingRight="10px"
+             >
+         </TextView>
+           <TextView
+             android:layout_width="wrap_content"
+             android:textColor="@android:color/primary_text_light"
+             android:layout_height="wrap_content"
+               android:paddingLeft="20px"
+         android:paddingRight="10px"
+             android:text="副标三" >
+         </TextView>
+           <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+               android:paddingLeft="20px"
+         android:paddingRight="10px"
+             android:text="副标四" >
+         </TextView>
+           <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+               android:paddingLeft="20px"
+         android:paddingRight="10px"
+             android:text="副标五" >
+         </TextView>
+     </LinearLayout>
+   
+      <LinearLayout   android:id="@+id/news_subs"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/news_sub"
+         android:background="@drawable/news_07"
+         android:paddingLeft="5px"
+         android:orientation="horizontal">
+      </LinearLayout>
+      <LinearLayout 
+        android:layout_below="@+id/news_subs"
+        android:paddingBottom="71px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        >
+     <ListView  android:id="@+id/vlist"
+         android:scrollbars="vertical"
+         android:divider="@drawable/divise"
+         android:background="@drawable/bg"
+         android:fastScrollEnabled="true"
+          android:layout_width="fill_parent"   
+    android:layout_height="fill_parent"
+    android:stretchMode="columnWidth"  
+    android:gravity="center"  >
+      </ListView>
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        >
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/menu" />
+    </LinearLayout>
+   
+</RelativeLayout>
