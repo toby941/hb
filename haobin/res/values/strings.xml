@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-
     <string name="hello">Hello World, HaobinActivity!</string>
     <string name="app_name">濠滨网</string>
     <string name="icon1">论坛</string>
@@ -14,6 +13,5 @@
     <string name="pull_to_refresh_pull_label">下拉可以刷新...</string>
     <string name="pull_to_refresh_release_label">松开刷新...</string>
     <string name="pull_to_refresh_refreshing_label">刷新中...</string>
-    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
-
+    <string name="pull_to_refresh_tap_label">点击刷新...</string>
 </resources>
