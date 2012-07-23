@@ -8,85 +8,36 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
-        <LinearLayout
-            android:id="@+id/m_news"
+        <LinearLayout android:id="@+id/m_news"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/b1_1"
             android:layout_weight="1"
-            android:gravity="bottom|center_horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:paddingBottom="2px"
-                android:textColor="@android:color/white"
-                android:text="新闻" />
-        </LinearLayout>
-
-         <LinearLayout
-                android:id="@+id/m_video"
+            android:gravity="bottom|center_horizontal" />
+         <LinearLayout  android:id="@+id/m_video"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/b2"
             android:layout_weight="1"
-            android:gravity="bottom|center_horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:paddingBottom="2px"
-                android:textColor="@android:color/white"
-                android:text="视频" />
-        </LinearLayout>
-
-        <LinearLayout
-              android:id="@+id/m_image"
+            android:gravity="bottom|center_horizontal" />
+        <LinearLayout android:id="@+id/m_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/b3"
             android:layout_weight="1"
-            android:gravity="bottom|center_horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:paddingBottom="2px"
-                android:textColor="@android:color/white"
-                android:text="图片" />
-        </LinearLayout>
-
-        <LinearLayout
-              android:id="@+id/m_s"
+            android:gravity="bottom|center_horizontal" />
+        <LinearLayout android:id="@+id/m_s"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/b4"
             android:layout_weight="1"
-            android:gravity="bottom|center_horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:paddingBottom="2px"
-                android:textColor="@android:color/white"
-                android:text="专题" />
-        </LinearLayout>
-
-        <LinearLayout
-              android:id="@+id/m_vote"
+            android:gravity="bottom|center_horizontal" />
+        <LinearLayout android:id="@+id/m_vote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/b5"
             android:layout_weight="1"
-            android:gravity="bottom|center_horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:paddingBottom="2px"
-                android:textColor="@android:color/white"
-                android:text="投票" />
-        </LinearLayout>
+            android:gravity="bottom|center_horizontal" />
     </LinearLayout>
 
 </LinearLayout>

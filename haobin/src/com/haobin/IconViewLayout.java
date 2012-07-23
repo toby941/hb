@@ -54,7 +54,7 @@ public class IconViewLayout extends LinearLayout {
 					Toast.makeText(
 							context,
 							"【" + context.getString(layout.getMarkId()) + "】"
-									+ "精彩功能 敬请期待", 500).show();
+									+ "精彩功能 敬请期待", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
