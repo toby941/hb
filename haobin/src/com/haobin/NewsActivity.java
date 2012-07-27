@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.format.DateUtils;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -310,10 +311,15 @@ public class NewsActivity extends Activity {
 		protected void onPostExecute(String[] result) {
 
 			// Call onRefreshComplete when the list has been refreshed.
-			vlistView.onRefreshComplete();
+			vlistView.onRefreshComplete("Updated: "
+					+ DateUtils.formatDateTime(getApplicationContext(),
+							System.currentTimeMillis(),
+							DateUtils.FORMAT_SHOW_TIME
+									| DateUtils.FORMAT_SHOW_DATE
+									| DateUtils.FORMAT_ABBREV_ALL));
 			// Toast.makeText(NewsActivity.this.getApplication(), "已经是最新",
 			// 500).show();
-			// super.onPostExecute(result);
+			super.onPostExecute(result);
 		}
 	}
 }
