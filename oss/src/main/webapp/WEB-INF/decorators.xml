@@ -1,0 +1,15 @@
+<decorators defaultdir="/WEB-INF/jsp/layouts">
+    <decorator name="application" page="layout.jsp">
+        <pattern>*</pattern>
+    </decorator>
+    
+    <decorator name="admin_application" page="admin_layout.jsp">
+        <pattern>/admin/*</pattern>
+    </decorator>
+    
+    <excludes>
+        <!-- These files will not get decorated. -->
+        <pattern>/api/*</pattern>
+        <pattern>*.html</pattern>
+    </excludes>
+</decorators>
