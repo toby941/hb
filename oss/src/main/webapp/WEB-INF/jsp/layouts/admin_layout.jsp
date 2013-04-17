@@ -40,7 +40,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Gulf管理后台</a>
+          <a class="brand" href="/">回首页</a>
           <% if(isLogin){ %>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
@@ -60,30 +60,14 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <% if(isLogin){ %>
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li class="active"><a href="/admin/news/list">新闻</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
-        <decorator:body/>
-        </div><!--/row-->
-        <% }else{ %>
+      
         <div class="span12">
         <decorator:body/>
         </div>
-        <% }%>
       <hr>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Company 2013</p>
       </footer>
 
     </div><!--/.fluid-container-->

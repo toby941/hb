@@ -41,7 +41,8 @@ img{border:none;}
 .clean{clear:both;}
 
 body{-webkit-text-size-adjust:none;
-	 background:#efece4;
+//	 background:#efece4;
+	 background:#fff;
      }/*谷歌浏览器字体大小*/
 /*默认样式*/
 

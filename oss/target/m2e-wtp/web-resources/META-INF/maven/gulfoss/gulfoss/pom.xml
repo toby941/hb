@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>gulfoss</groupId>
-  <artifactId>hboss</artifactId>
-  <version>1</version>
+  <artifactId>gulfoss</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>hboss</name>
-  <description>hboss</description>
+  <name>gulf</name>
+  <description>gulf</description>
   
   <dependencies>
     <dependency>
@@ -108,14 +108,9 @@
     	<artifactId>jstl</artifactId>
     	<version>1.2</version>
     </dependency>
-    <dependency>
-    	<groupId>net.sourceforge.jtds</groupId>
-    	<artifactId>com.springsource.net.sourceforge.jtds</artifactId>
-    	<version>1.2.2</version>
-    </dependency>
   </dependencies>
   <build>
-    <finalName>hboss</finalName>
+    <finalName>weimp</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
@@ -201,11 +196,11 @@
 	<profile>
 		<id>dev</id>
 		<properties>
-			<jdbc.url>jdbc:jtds:sqlserver://202.119.97.205:1433;DatabaseName=DB_XG_MIS</jdbc.url>
-			<jdbc.username>sa</jdbc.username>
-			<jdbc.password>hg6643</jdbc.password>
-			<jdbc.driverClassName>net.sourceforge.jtds.jdbc.Driver</jdbc.driverClassName>
-			<host>http://weimp.sinaapp.com</host>
+			<jdbc.url>jdbc:mysql://192.168.1.247:3306/test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</jdbc.url>
+			<jdbc.username>remote</jdbc.username>
+			<jdbc.password>123456</jdbc.password>
+			<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+			<host>http://192.168.1.16:9091</host>
 			<password>admin</password>
 		</properties>
 	</profile>
@@ -215,10 +210,10 @@
 			<activeByDefault>true</activeByDefault>
 		</activation>
 		<properties>
-			<jdbc.url>jdbc:jtds:sqlserver://202.119.97.205:1433;DatabaseName=DB_XG_MIS</jdbc.url>
-			<jdbc.username>sa</jdbc.username>
-			<jdbc.password>hg6643</jdbc.password>
-			<jdbc.driverClassName>net.sourceforge.jtds.jdbc.Driver</jdbc.driverClassName>
+			<jdbc.url>jdbc:mysql://ryimg.com:3306/bigbang_test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</jdbc.url>
+			<jdbc.username>remote</jdbc.username>
+			<jdbc.password>123456</jdbc.password>
+			<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
 			<host>http://weimp.sinaapp.com</host>
 			<password>admin</password>
 		</properties>

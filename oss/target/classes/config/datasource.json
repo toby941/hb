@@ -1,0 +1,35 @@
+var ioc = {
+	// 读取配置文件
+	config : {
+		type : "org.nutz.ioc.impl.PropertiesProxy",
+		fields : {
+			paths : ["environment.properties"]
+		}
+	},
+	// 数据源
+	dataSource : {
+		type :"org.apache.commons.dbcp.BasicDataSource",
+		events : {
+			depose :"close"
+		},
+		fields : {
+			driverClassName : {java :"$config.get('jdbc.driverClassName')"},
+			url             : {java :"$config.get('jdbc.url')"},
+			username        : {java :"$config.get('jdbc.username')"},
+			password        : {java :"$config.get('jdbc.password')"},
+			initialSize     : 10,
+			maxActive       : 100,
+			testOnReturn    : true,
+			testOnBorrow    : true,
+			timeBetweenEvictionRunsMillis : 3600000,
+			minEvictableIdleTimeMillis : 7200000,
+			testWhileIdle : true,
+			validationQuery : "select 1"
+		}
+	},
+	// Dao
+	dao : {
+		type :'org.nutz.dao.impl.NutDao',
+		args : [ {refer :"dataSource"}]
+	}
+};

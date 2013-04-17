@@ -3,10 +3,7 @@
  */
 package com.gulf.web.controller.front;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 import org.nutz.ioc.annotation.InjectName;
 import org.nutz.ioc.loader.annotation.Inject;
@@ -14,14 +11,9 @@ import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.mvc.annotation.At;
 import org.nutz.mvc.annotation.GET;
 import org.nutz.mvc.annotation.Ok;
-import org.nutz.mvc.annotation.Param;
 
-import weibo4j.model.User;
-import weibo4j.model.WeiboException;
-import weibo4j.org.json.JSONException;
-
-import com.gulf.domain.WeiboUser;
-import com.gulf.service.WeiboService;
+import com.gulf.domain.News;
+import com.gulf.service.NewsService;
 
 /**
  * HomeModule.java
@@ -32,32 +24,21 @@ import com.gulf.service.WeiboService;
 @InjectName
 public class HomeController {
     @Inject
-    private WeiboService weiboService;
+    private NewsService newsService;
 
     @At("/")
-    @GET
-    @Ok("jsp:jsp.front.photo")
-    public Map<String, Object> home() {
-        Map<String, Object> model = new HashMap<String, Object>();
-        model.put("weibologin", weiboService.getLoginUrl());
-        return model;
+    @Ok("jsp:jsp.index")
+    public List<News> list() {
+        // List<News> list = newsService.getList(0);
+        return null;
     }
 
-    @At("/oauth2return")
+    @At("/view/?")
+    @Ok("jsp:jsp.news_view")
     @GET
-    @Ok("redirect:/")
-    public String oauth2return(@Param("code") String code, HttpServletRequest request) throws WeiboException,
-            JSONException {
-        WeiboUser weiboUser = weiboService.getLastestUser(code);
-        User user = weiboService.getUser(weiboUser);
-        request.getSession().setAttribute("user", user);
-        return "你好";
+    public News view(int id) {
+        News news = newsService.getNews(id);
+        return news;
     }
 
-    @At("/weibosearch")
-    @GET
-    @Ok("jsp:jsp.front.weibosearch")
-    public String weiboSearch() {
-        return "你好t";
-    }
 }

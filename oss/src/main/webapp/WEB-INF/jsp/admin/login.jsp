@@ -29,10 +29,75 @@
 </style>
 </head>
 <body>
-    <form class="form-signin" action="/admin/login" method="post">
-        <h2 class="form-signin-heading"><%= Init.p.getProperty("admin-login") %></h2>
-        <input type="text" class="input-block-level" placeholder="用户名" id="username" name="username">
-        <input type="password" class="input-block-level" placeholder="口令" id="password" name="password">
+   <div class="tabbable form-signin">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#1" data-toggle="tab">登陆</a></li>
+    <li><a href="#2" data-toggle="tab">首次访问</a></li>
+     <li><a href="#2" data-toggle="tab">用人单位信息注册</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="1">
+       <form  action="/admin/login" method="post">
+        <div class="control-group">
+				<label class="control-label" for="input01">学号</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level" placeholder="用户名" id="username" name="username">
+				</div>
+			</div>
+			  <div class="control-group">
+				<label class="control-label" for="input01">密码</label>
+				<div class="controls">
+				 <input type="password" class="input-block-level" placeholder="口令" id="password" name="password">
+				</div>
+			</div>
         <button class="btn btn-large btn-primary" type="submit">登录</button>
       </form>
+    </div>
+    <div class="tab-pane" id="2">
+     <div class="tab-content">
+    <div class="tab-pane active" id="1">
+       <form  action="/admin/login" method="post">
+        <div class="control-group">
+				<label class="control-label" for="input01">身份证号码</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level" placeholder="用户名" id="username" name="username">
+				</div>
+			</div>
+			  <div class="control-group">
+				<label class="control-label" for="input01">学号</label>
+				<div class="controls">
+				 <input type="password" class="input-block-level" placeholder="口令" id="password" name="password">
+				</div>
+			</div>
+        <button class="btn btn-large btn-primary" type="submit">登录</button>
+      </form>
+    </div>
+    </div>
+  </div>
+   <div class="tab-pane" id="3">
+     <div class="tab-content">
+    <div class="tab-pane active" id="1">
+       <form  action="/admin/login" method="post">
+        <div class="control-group">
+				<label class="control-label" for="input01">身份证号码</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level" placeholder="用户名" id="username" name="username">
+				</div>
+			</div>
+			  <div class="control-group">
+				<label class="control-label" for="input01">学号</label>
+				<div class="controls">
+				 <input type="password" class="input-block-level" placeholder="口令" id="password" name="password">
+				</div>
+			</div>
+        <button class="btn btn-large btn-primary" type="submit">登录</button>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+
+   
 </body>

@@ -35,12 +35,16 @@ $(document).ready(function() {
 	
 	$('#calendar').fullCalendar({
 		theme: true,
-		header: {
-			left: 'prev,next today',
-			center: 'title',
-			right: 'month,agendaWeek,agendaDay'
-		},
+		//header:false,
+		header:{left: 'prev,next today',center: 'title',right: 'month,agendaWeek,agendaDay'},
 		editable: true,
+		firstDay :1,
+		dayNames:['星期天', '星期一', '星期二', '星期三',
+		          '星期四', '星期五', '星期六'],
+		dayNamesShort:['天', '一', '二', '三', '四', '五', '六'], 
+		buttonText:{ today:'今天', month:'月', week:'周', day:'天'},
+		monthNames:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+		monthNamesShort:['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
 		events: [
 			{
 				title: '全天事件',
@@ -104,7 +108,7 @@ $(document).ready(function() {
 	border: 1px solid #c8c8c8;
 }
 #calendar {
-		width: 500px;
+		width: 400px;
 		margin: 0 auto;
 		}
 </style>
@@ -115,10 +119,9 @@ $(document).ready(function() {
 <body class="home blog" huaban_screen_capture_injected="true" screen_capture_injected="true"><iframe style="display: none;" id="sina_anywhere_iframe"></iframe>
 <div id="container">
 	<nav id="nav_sub" class="group"><div class="top">
-<ul class="menu" id="desktopnotifyrequest" style=""><li><a href="http://www.toby941.com/#" onclick="javascript:notifyrequest();" title="如果您打开桌面通知并且不关闭雷锋网首页，则雷锋网有新文章发布的时候会第一时间弹出通知" style="color: rgb(255, 255, 255);">新文章通知</a></li></ul>
-		<ul id="menu-top" class="menu"><li id="menu-item-232422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232422"><a href="http://www.toby941.com/about-us">关于本站</a></li>
-<li id="menu-item-146634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146634"><a href="http://www.toby941.com/tougao">求报道</a></li>
-<li id="menu-item-230630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-230630"><a href="http://www.toby941.com/tougao">投稿</a></li>
+<ul id="menu-top" class="menu"><li id="menu-item-232422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232422"><a href="http://www.toby941.com/about-us">关于本站</a></li>
+<li id="menu-item-146634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146634"><a href="http://www.toby941.com/tougao">登陆</a></li>
+<li id="menu-item-230630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-230630"><a href="http://www.toby941.com/tougao">注册</a></li>
 </ul>	</div></nav>
 	<header id="branding" class="group">
 		<h1 id="logo"><a href="./index_files/index.html" title="雷锋网" rel="home">雷锋网</a></h1>
@@ -127,12 +130,7 @@ $(document).ready(function() {
 	<nav id="nav_main" class="group"><div id="nav_main_x">
 		<ul id="menu-main" class="menu">
 <li id="menu-item-229187" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-229187 top-level-0"><a href="./index_files/index.html">首页</a></li>
-<li id="menu-item-229189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-229189 top-level-1"><a href="http://www.toby941.com/category/c-app">产品</a></li>
-<li id="menu-item-229190" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-229190 top-level-2"><a href="http://www.toby941.com/category/f-startup">创享会</a></li>
-<li id="menu-item-229194" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-229194 top-level-3"><a href="http://www.toby941.com/category/opinion">雷声</a></li>
-<li id="menu-item-229188" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-229188 top-level-4"><a href="http://www.toby941.com/category/a-eye">业界</a></li>
-<li id="menu-item-229193" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-229193 top-level-5"><a href="http://www.toby941.com/category/school">学堂</a></li>
-<li id="menu-item-229191" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-229191 top-level-6"><a href="http://www.toby941.com/category/special">专题</a></li>
+<li id="menu-item-229189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-229189 top-level-1"><a href="http://www.toby941.com/category/c-app">招聘</a></li>
 </ul>		
 
 <div class="searchform textwidget" style="display: none;">

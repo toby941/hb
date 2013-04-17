@@ -33,6 +33,14 @@ public class BaseService {
     @Inject
     protected Dao dao;
 
+    public Dao getDao() {
+        return dao;
+    }
+
+    public void setDao(Dao dao) {
+        this.dao = dao;
+    }
+
     @Inject
     protected PropertiesProxy config;
 

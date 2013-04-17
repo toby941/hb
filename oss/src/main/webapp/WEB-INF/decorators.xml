@@ -1,10 +1,10 @@
 <decorators defaultdir="/WEB-INF/jsp/layouts">
-    <decorator name="application" page="layout.jsp">
+    <decorator name="application" page="new_layout.jsp">
         <pattern>*</pattern>
     </decorator>
     
     <decorator name="admin_application" page="admin_layout.jsp">
-        <pattern>/admin/*</pattern>
+        <pattern>/member/*</pattern>
     </decorator>
     
     <excludes>
