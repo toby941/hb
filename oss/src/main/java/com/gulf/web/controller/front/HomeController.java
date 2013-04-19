@@ -29,12 +29,12 @@ public class HomeController {
     @At("/")
     @Ok("jsp:jsp.index")
     public List<News> list() {
-        // List<News> list = newsService.getList(0);
-        return null;
+        List<News> list = newsService.getList(0);
+        return list;
     }
 
     @At("/view/?")
-    @Ok("jsp:jsp.news_view")
+    @Ok("jsp:jsp.view")
     @GET
     public News view(int id) {
         News news = newsService.getNews(id);

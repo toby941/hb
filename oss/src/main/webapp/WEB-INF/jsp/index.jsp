@@ -1,10 +1,5 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<div class="searchform textwidget" style="display: none;">
-<form method="get" id="searchform" class="search" action="./index_files/index.html">
-	<input type="text" value="" title="搜索内容" name="s" id="s"><input type="submit" value="搜索" class="searchbutton" id="search_submit">
-</form>
-</div>	</div></nav><div class="editorschoice">
+<div class="editorschoice">
 
 <div id="cslider0" class="ecitem">
 <div class="slider no-control" style="width: 226px;">
@@ -247,10 +242,3 @@ if(transition) slider3.setTransitionFunction(transition); else slider3.setTransi
 </ul>	
 	</aside>	
 		</div>	
-<script type="text/javascript">
-jQuery(function(){
-	setlastvisit();
-	nt='2013-03-28 10:29:08';
-	desktopnotify();
-});
-</script>

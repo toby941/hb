@@ -1,7 +1,9 @@
 package com.gulf.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Condition;
 import org.nutz.ioc.loader.annotation.IocBean;
@@ -24,9 +26,19 @@ public class NewsService extends BaseService {
      * @return
      */
     public List<News> getList(int pageNumber) {
+
         Condition condition = null;
         condition = Cnd.where("SFFB", "=", "1").limit(pageNumber, Constants.PAGE_SIZE).desc("FBSJ");
         return dao.query(News.class, condition);
+    }
+
+    public List<News> getTmpList() {
+        ArrayList<News> list = new ArrayList<News>();
+        for (int i = 0; i < 15; i++) {
+            News s = new News();
+            s.setTitle("title" + RandomStringUtils.random(15));
+        }
+        return list;
     }
 
 }

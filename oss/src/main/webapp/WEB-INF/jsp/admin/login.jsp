@@ -32,11 +32,11 @@
    <div class="tabbable form-signin">
   <ul class="nav nav-tabs">
     <li class="active"><a href="#1" data-toggle="tab">登陆</a></li>
-    <li><a href="#2" data-toggle="tab">首次访问</a></li>
-     <li><a href="#2" data-toggle="tab">用人单位信息注册</a></li>
+    <li><a href="#2" data-toggle="tab">学生激活</a></li>
+     <li><a href="#3" data-toggle="tab">用人单位注册</a></li>
   </ul>
   <div class="tab-content">
-    <div class="tab-pane active" id="1">
+    <div class="tab-pane active"  id="1">
        <form  action="/admin/login" method="post">
         <div class="control-group">
 				<label class="control-label" for="input01">学号</label>
@@ -54,32 +54,32 @@
       </form>
     </div>
     <div class="tab-pane" id="2">
-     <div class="tab-content">
-    <div class="tab-pane active" id="1">
        <form  action="/admin/login" method="post">
         <div class="control-group">
 				<label class="control-label" for="input01">身份证号码</label>
 				<div class="controls">
-				  <input type="text" class="input-block-level" placeholder="用户名" id="username" name="username">
+				  <input type="text" class="input-block-level" placeholder="请出入18位身份证号码，不够用X补齐" id="username" name="username">
 				</div>
 			</div>
 			  <div class="control-group">
 				<label class="control-label" for="input01">学号</label>
 				<div class="controls">
-				 <input type="password" class="input-block-level" placeholder="口令" id="password" name="password">
+				 <input type="password" class="input-block-level" placeholder="你的学号" id="password" name="password">
 				</div>
 			</div>
-        <button class="btn btn-large btn-primary" type="submit">登录</button>
+			 <div class="control-group">
+				<label class="control-label" for="input01">姓名</label>
+				<div class="controls">
+				 <input type="password" class="input-block-level" placeholder="你的姓名" id="password" name="password">
+				</div>
+			</div>
+        <button class="btn btn-large btn-primary" type="submit">激活</button>
       </form>
     </div>
-    </div>
-  </div>
    <div class="tab-pane" id="3">
-     <div class="tab-content">
-    <div class="tab-pane active" id="1">
        <form  action="/admin/login" method="post">
         <div class="control-group">
-				<label class="control-label" for="input01">身份证号码</label>
+				<label class="control-label" for="input01">企业登记号</label>
 				<div class="controls">
 				  <input type="text" class="input-block-level" placeholder="用户名" id="username" name="username">
 				</div>
@@ -94,10 +94,5 @@
       </form>
     </div>
     </div>
-  </div>
-</div>
-  </div>
-
-
-   
+ 
 </body>

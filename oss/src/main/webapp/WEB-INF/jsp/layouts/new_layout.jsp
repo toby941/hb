@@ -115,6 +115,29 @@ $(document).ready(function() {
 		width: 400px;
 		margin: 0 auto;
 		}
+.form-signin {
+        max-width: 600px;
+        padding: 19px 29px 29px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }		
 </style>
 <script type="text/javascript" src="./index_files/slider.js"></script>
 <script type="text/javascript" src="./index_files/jquery.cookie.js"></script>
@@ -137,7 +160,7 @@ $(document).ready(function() {
 <div id="container">
 	<nav id="nav_sub" class="group"><div class="top">
 <ul id="menu-top" class="menu"><li id="menu-item-232422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232422"><a href="http://www.toby941.com/about-us">关于本站</a></li>
-<li id="menu-item-146634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146634"><a data-toggle="modal" href="#login" >登陆</a></li>
+<li id="menu-item-146634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146634"><a href="member//login" >登陆</a></li>
 <li id="menu-item-230630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-230630"><a href="/register">注册</a></li>
 </ul>	</div></nav>
 	<header id="branding" class="group">
@@ -152,6 +175,12 @@ $(document).ready(function() {
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span12">
+        <div class="searchform textwidget" style="display: none;">
+<form method="get" id="searchform" class="search" action="./index_files/index.html">
+	<input type="text" value="" title="搜索内容" name="s" id="s"><input type="submit" value="搜索" class="searchbutton" id="search_submit">
+</form>
+</div>	</div></nav>
+        
         <decorator:body/>
         </div>
       <hr>
@@ -178,79 +207,5 @@ $(document).ready(function() {
 <script src="./index_files/wb.js" type="text/javascript" charset="utf-8"></script>
 
     </div><!--/.fluid-container-->
-
-  <div class="tabbable modal form-signin hide fade" id="login" >
-   <div class="modal-header">
-    <a class="close" data-dismiss="modal">×</a>
-    <h3>对话框标题</h3>
-  </div>
-  <ul class="nav nav-tabs">
-    <li class="active"><a href="#1" data-toggle="tab">登陆</a></li>
-    <li><a href="#2" data-toggle="tab">首次访问</a></li>
-     <li><a href="#2" data-toggle="tab">用人单位信息注册</a></li>
-  </ul>
-  <div class="tab-content">
-    <div class="tab-pane active" id="1">
-       <form  action="/admin/login" method="post">
-        <div class="control-group">
-				<label class="control-label" for="input01">学号</label>
-				<div class="controls">
-				  <input type="text" class="input-block-level" placeholder="用户名" id="username" name="username">
-				</div>
-			</div>
-			  <div class="control-group">
-				<label class="control-label" for="input01">密码</label>
-				<div class="controls">
-				 <input type="password" class="input-block-level" placeholder="口令" id="password" name="password">
-				</div>
-			</div>
-        <button class="btn btn-large btn-primary" type="submit">登录</button>
-      </form>
-    </div>
-    <div class="tab-pane" id="2">
-     <div class="tab-content">
-    <div class="tab-pane active" id="1">
-       <form  action="/admin/login" method="post">
-        <div class="control-group">
-				<label class="control-label" for="input01">身份证号码</label>
-				<div class="controls">
-				  <input type="text" class="input-block-level" placeholder="用户名" id="username" name="username">
-				</div>
-			</div>
-			  <div class="control-group">
-				<label class="control-label" for="input01">学号</label>
-				<div class="controls">
-				 <input type="password" class="input-block-level" placeholder="口令" id="password" name="password">
-				</div>
-			</div>
-        <button class="btn btn-large btn-primary" type="submit">登录</button>
-      </form>
-    </div>
-    </div>
-  </div>
-   <div class="tab-pane" id="3">
-     <div class="tab-content">
-    <div class="tab-pane active" id="1">
-       <form  action="/admin/login" method="post">
-        <div class="control-group">
-				<label class="control-label" for="input01">身份证号码</label>
-				<div class="controls">
-				  <input type="text" class="input-block-level" placeholder="用户名" id="username" name="username">
-				</div>
-			</div>
-			  <div class="control-group">
-				<label class="control-label" for="input01">学号</label>
-				<div class="controls">
-				 <input type="password" class="input-block-level" placeholder="口令" id="password" name="password">
-				</div>
-			</div>
-        <button class="btn btn-large btn-primary" type="submit">登录</button>
-      </form>
-    </div>
-    </div>
-  </div>
-</div>
-  </div>
-
   </body>
 </html>

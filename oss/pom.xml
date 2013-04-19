@@ -201,11 +201,11 @@
 	<profile>
 		<id>dev</id>
 		<properties>
-			<jdbc.url>jdbc:jtds:sqlserver://202.119.97.205:1433;DatabaseName=DB_XG_MIS</jdbc.url>
-			<jdbc.username>sa</jdbc.username>
-			<jdbc.password>hg6643</jdbc.password>
-			<jdbc.driverClassName>net.sourceforge.jtds.jdbc.Driver</jdbc.driverClassName>
-			<host>http://weimp.sinaapp.com</host>
+			<jdbc.url>jdbc:mysql://192.168.1.247:3306/test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</jdbc.url>
+			<jdbc.username>remote</jdbc.username>
+			<jdbc.password>123456</jdbc.password>
+			<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+			<host>http://192.168.1.16:9091</host>
 			<password>admin</password>
 		</properties>
 	</profile>
