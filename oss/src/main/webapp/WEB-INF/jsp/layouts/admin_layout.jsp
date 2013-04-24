@@ -31,7 +31,6 @@
   </head>
 
   <body>
-
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -41,17 +40,6 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="/">回首页</a>
-          <% if(isLogin){ %>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
-            </p>
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="/logout">Logout</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-          <%} %>
         </div>
       </div>
     </div>

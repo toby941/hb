@@ -49,6 +49,16 @@ public class BaseService {
     }
 
     /**
+     * 判断是否生产环境项目
+     * 
+     * @return
+     */
+    public Boolean isRelease() {
+        String env = getConfig("env");
+        return "release".equalsIgnoreCase(env);
+    }
+
+    /**
      * 根据Id删除数据
      * 
      * @param <T>

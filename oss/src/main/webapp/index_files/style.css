@@ -142,7 +142,6 @@ body{-webkit-text-size-adjust:none;
 	}
 
 #menu-main li a{
-	color:#4f4e4c;
 	text-decoration:none;
 	padding:4px 20px 4px 20px;
 	}
@@ -157,6 +156,7 @@ body{-webkit-text-size-adjust:none;
 	color:#fff;
 	background:#61b0e9;
 	}
+
 
 .searchform{
 	float:right;

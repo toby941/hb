@@ -1,4 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<style>
+<!--
+.top-level-1 a{
+	color:#fff;
+	background:#61b0e9;
+}
+-->
+</style>
 	<div id="content_main">
 					<article class="post-234993 post type-post status-publish format-standard hentry category-a-eye tag-1006 tag-11003 tag-15553 tag-23874 tag-joy article_single" id="post-234993">
 			<header>
@@ -7,7 +15,7 @@
 				<footer class="post_meta">
 			<p class="post_tag"><a href="http://www.leiphone.com/tag/%e7%94%b5%e5%95%86" rel="tag">我是标签云</a> <a href="http://www.leiphone.com/tag/%e5%a4%a9%e7%8c%ab" rel="tag">天猫</a> <a href="http://www.leiphone.com/tag/%e4%ba%ac%e4%b8%9c" rel="tag">京东</a> <a href="http://www.leiphone.com/tag/%e7%8b%97" rel="tag">狗</a> <a href="http://www.leiphone.com/tag/joy" rel="tag">JOY</a></p>				</footer>			
 			</header>
-			<div class="entry group">
+			<d<div class="entry group">
 							<p><strong><a href="/wp-content/uploads/09-1/-2/09-18-25-99.jpg"><img class="alignleft size-thumbnail wp-image-234574" title="Kakao" src="http://files.leiphone.com/uploads/09-1/-2/09-18-25-99-150x150.jpg" alt="Kakao" width="150" height="150" data-pinit="registered"></a>我是正文 本文改编自华尔街日报中文版</strong><a href="http://cn.wsj.com/gb/20130328/tec143628.asp?source=Billingual">《“微信”们崛起 抢了谁的地盘？》</a>。</p>
 <p>作为移动互联网时代有代表性的IM工具产品，WhatsApp、WeChat、Line与Kakao Talk已经成为全世界数亿人不可或缺的通讯工具。消费者使用这些程序提供的服务时，并不直接向电信运营商付费。</p>
 <p>即时通讯服务通常并不仅限于收发短信，它还有语音备忘、照相应用、游戏接入和虚拟纸贴等新功能，这些功能在青少年人群中很受欢迎。</p>

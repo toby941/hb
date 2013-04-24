@@ -207,6 +207,7 @@
 			<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
 			<host>http://192.168.1.16:9091</host>
 			<password>admin</password>
+			<env>dev</env>
 		</properties>
 	</profile>
 	<profile>
@@ -221,6 +222,7 @@
 			<jdbc.driverClassName>net.sourceforge.jtds.jdbc.Driver</jdbc.driverClassName>
 			<host>http://weimp.sinaapp.com</host>
 			<password>admin</password>
+			<env>dev</env>
 		</properties>
 	</profile>
 	<profile>
@@ -235,6 +237,7 @@
 			<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
 			<host>http://weimp.sinaapp.com</host>
 			<password>weimptoby</password>
+			<env>release</env>
 		</properties>
 	</profile>
   </profiles>

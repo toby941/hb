@@ -37,7 +37,7 @@
   </ul>
   <div class="tab-content">
     <div class="tab-pane active"  id="1">
-       <form  action="/admin/login" method="post">
+       <form  action="/member/login" method="post">
         <div class="control-group">
 				<label class="control-label" for="input01">学号</label>
 				<div class="controls">
@@ -54,7 +54,7 @@
       </form>
     </div>
     <div class="tab-pane" id="2">
-       <form  action="/admin/login" method="post">
+       <form  action="/member/active" method="post">
         <div class="control-group">
 				<label class="control-label" for="input01">身份证号码</label>
 				<div class="controls">
@@ -77,7 +77,7 @@
       </form>
     </div>
    <div class="tab-pane" id="3">
-       <form  action="/admin/login" method="post">
+       <form  action="/member/company" method="post">
         <div class="control-group">
 				<label class="control-label" for="input01">企业登记号</label>
 				<div class="controls">
