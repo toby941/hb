@@ -59,6 +59,22 @@ public class BaseService {
     }
 
     /**
+     * 获取满足condition条件的记录条数
+     * 
+     * @param condition 可为null
+     * @return
+     */
+    public <T> Integer getCount(Condition condition, Class<T> c) {
+        if (isRelease()) {
+            return dao.count(c, condition);
+
+        }
+        else {
+            return 100;
+        }
+    }
+
+    /**
      * 根据Id删除数据
      * 
      * @param <T>

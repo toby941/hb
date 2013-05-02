@@ -27,6 +27,16 @@ public class JobService extends BaseService {
     }
 
     /**
+     * 获取状态为其启用的所有招聘记录条数
+     * 
+     * @return
+     */
+    public Integer getTotalCount() {
+        Condition condition = Cnd.where("SFQY", "=", "1");
+        return getCount(condition, JobFairs.class);
+    }
+
+    /**
      * @param pageNumber
      * @param type
      * @return
@@ -35,7 +45,7 @@ public class JobService extends BaseService {
 
         if (isRelease()) {
             Condition condition = null;
-            condition = Cnd.where("SFFB", "=", "1").limit(pageNumber, Constants.PAGE_SIZE).desc("FBSJ");
+            condition = Cnd.where("SFQY", "=", "1").limit(pageNumber, Constants.PAGE_SIZE).desc("ZPKSSJ");
             return dao.query(JobFairs.class, condition);
 
         }
@@ -47,19 +57,59 @@ public class JobService extends BaseService {
 
     public List<JobFairs> getTmpList(int pageNumber) {
         ArrayList<JobFairs> list = new ArrayList<JobFairs>();
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 5; i++) {
             JobFairs job = new JobFairs();
             job.setExplain("招聘说明");
-            job.setSite("招聘地点");
+            job.setSite("南京市XX产业园12号XX楼09室");
             job.setName("XX招聘会");
             job.setEndTime("2013-05-10");
-            job.setStartTime("2013-01-10");
+            job.setStartTime("2013-05-02");
             job.setId("1");
             job.setUnit("XX事业单位");
-
+            job.setNo("001");
             list.add(job);
         }
         return list;
+    }
+
+    public List<JobFairs> getAll() {
+        if (isRelease()) {
+            Condition condition = null;
+            condition = Cnd.where("SFQY", "=", "1").desc("ZPKSSJ");
+            return dao.query(JobFairs.class, condition);
+        }
+        else {
+            return getTmpList(0);
+        }
+
+    }
+
+    /**
+     * @param word 搜索关键词
+     * @param page 搜索分页
+     * @return
+     */
+    public List<JobFairs> search(String word, Integer page) {
+        if (page == null) {
+            page = 1;
+        }
+        if (isRelease()) {
+
+            Condition condition = null;
+            condition =
+                    Cnd.where("SFQY", "=", "1").and("ZPHSM", "LIKE", "%+" + word + "%")
+                            .limit(page, Constants.PAGE_SIZE).desc("ZPKSSJ");
+            return dao.query(JobFairs.class, condition);
+        }
+        else {
+            return getTmpList(page);
+        }
+    }
+
+    public Integer getCountBySearchWord(String word) {
+        Condition condition = null;
+        condition = Cnd.where("SFQY", "=", "1").and("ZPHSM", "LIKE", "%+" + word + "%");
+        return getCount(condition, JobFairs.class);
     }
 
 }

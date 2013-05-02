@@ -28,6 +28,15 @@ public class NewsService extends BaseService {
     }
 
     /**
+     * 获取状态为其启用的所有新闻记录条数
+     * 
+     * @return
+     */
+    public Integer getTotalCount() {
+        return getCount(null, News.class);
+    }
+
+    /**
      * @param pageNumber
      * @param type
      * @return
@@ -57,8 +66,51 @@ public class NewsService extends BaseService {
             news.setClickCount(20);
             news.setPublisher("adder:" + pageNumber);
             news.setContent("content" + pageNumber);
+            news.setNewsType("校内");
+            news.setKeywords("ios");
             list.add(news);
         }
         return list;
+    }
+
+    public void updateClickCount(News news) {
+        if (isRelease()) {
+            News updateNews = new News();
+            updateNews.setClickCount(news.getClickCount() + 1);
+            updateNews.setId(news.getId());
+            Condition condition = null;
+            condition = Cnd.where("ID", "=", news.getId());
+            dao.updateIgnoreNull(updateNews);
+        }
+
+    }
+
+    public Integer getCountBySearchWord(String word) {
+        Condition condition = null;
+        condition = Cnd.where("SFFB", "=", "1").and("XWNR", "LIKE", "%+" + word + "%");
+        return getCount(condition, News.class);
+    }
+
+    /**
+     * @param word 搜索关键词
+     * @param page 搜索分页
+     * @return
+     */
+    public List<News> search(String word, Integer page) {
+        if (page == null) {
+            page = 1;
+        }
+
+        if (isRelease()) {
+
+            Condition condition = null;
+            condition =
+                    Cnd.where("SFFB", "=", "1").and("XWNR", "LIKE", "%+" + word + "%").limit(page, Constants.PAGE_SIZE)
+                            .desc("FBSJ");
+            return dao.query(News.class, condition);
+        }
+        else {
+            return getTmpList(page);
+        }
     }
 }
