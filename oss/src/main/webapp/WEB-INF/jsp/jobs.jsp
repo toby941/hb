@@ -21,13 +21,13 @@
 			</div>
 			<footer class="post_meta">
 				<span>by <c:out value="${jobs.unit}" />  发布时间: <c:out value="${jobs.startTime}" />  结束时间：<c:out value="${jobs.endTime}" />  </span>
-					<a href="/jobsview/${jobs.id}"  title="<c:out value="${jobs.name}" />" class="more" target="_blank"><img src="/index_files/readmore.png" alt="Read more"></a>
+					<a href="${el:host()}/jobsview/${jobs.id}"  title="<c:out value="${jobs.name}" />" class="more" target="_blank"><img src="${el:host()}/index_files/readmore.png" alt="Read more"></a>
 				<div class="clear"></div>
 			</footer>			
 		</article>
 	 </c:forEach>
 		<div class="navigation group">
 			<div class="wp-pagenavi">
-			<oss:pagination pageSize="30" href="/jobs/PAGENUM"  totalRecord="${obj.count}" currentPage="${obj.page}"></oss:pagination>		
+			<oss:pagination pageSize="30" href="${el:host()}/jobs/PAGENUM"  totalRecord="${obj.count}" currentPage="${obj.page}"></oss:pagination>		
 </div>		</div>
 	</div>

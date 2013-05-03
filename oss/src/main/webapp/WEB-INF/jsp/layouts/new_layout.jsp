@@ -16,20 +16,20 @@
 <meta property="og:url" content="http://www.toby941.com/">
 <meta property="og:title" content="toby941">
 <meta property="og:description" content="toby941">
-<link rel="stylesheet" href="/index_files/slider.min.css">
-<link rel="stylesheet" href="/index_files/style.css">
- <link href="/style/bootstrap.css" rel="stylesheet">
-<link rel="shortcut icon" href="http://www.toby941.com/favicon.png">
+<link rel="stylesheet" href="${el:host()}/index_files/slider.min.css">
+<link rel="stylesheet" href="${el:host()}/index_files/style.css">
+ <link href="${el:host()}/style/bootstrap.css" rel="stylesheet">
+<!-- <link rel="shortcut icon" href="http://www.toby941.com/favicon.png"> -->
 <!--[if lt IE 9]>
 <script src="/wp-content/themes/leiphone/js/html5.js" type="text/javascript"></script>
 <![endif]-->
-<link rel="stylesheet" id="wp-polls-css" href="/index_files/polls-css.css" type="text/css" media="all">
-<link rel="stylesheet" href="/style/fullcalendar_theme.css">
-<link href="/style/fullcalendar.css" rel="stylesheet">
-<script src='/index_files/jquery-1.9.1.min.js'></script>
-<script src='/index_files/jquery-ui-1.10.2.custom.min.js'></script>
-<script src='/index_files/fullcalendar.min.js'></script>
-<script src="/js/portamento.js"></script>
+<link rel="stylesheet" id="wp-polls-css" href="${el:host()}/index_files/polls-css.css" type="text/css" media="all">
+<link rel="stylesheet" href="${el:host()}/style/fullcalendar_theme.css">
+<link href="${el:host()}/style/fullcalendar.css" rel="stylesheet">
+<script src='${el:host()}/index_files/jquery-1.9.1.min.js'></script>
+<script src='${el:host()}/index_files/jquery-ui-1.10.2.custom.min.js'></script>
+<script src='${el:host()}/index_files/fullcalendar.min.js'></script>
+<script src="${el:host()}/js/portamento.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -50,7 +50,7 @@ $(document).ready(function() {
 		buttonText:{ today:'今天', month:'月', week:'周', day:'天'},
 		monthNames:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
 		monthNamesShort:['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
-		events: '/calendar'
+		events: '${el:host()}/calendar'
 	});
 	
 });
@@ -97,9 +97,9 @@ $(document).ready(function() {
 #portamento_container #sidebar.fixed {position:fixed;} /* if the panel is sliding, it needs position:fixed */      
 </style>
 
-<script type="text/javascript" src="./index_files/slider.js"></script>
-<script type="text/javascript" src="./index_files/jquery.cookie.js"></script>
-<script type="text/javascript" src="./index_files/site.js"></script>
+<script type="text/javascript" src="${el:host()}/index_files/slider.js"></script>
+<script type="text/javascript" src="${el:host()}/index_files/jquery.cookie.js"></script>
+<script type="text/javascript" src="${el:host()}/index_files/site.js"></script>
 </head>
 
   <body>
@@ -109,7 +109,7 @@ $(document).ready(function() {
 	<nav id="nav_sub" class="group"><div class="top">
  <ul id="menu-top" class="menu">
 <!--<li id="menu-item-232422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232422"><a href="http://www.toby941.com/about-us">关于本站</a></li> -->
-<li id="menu-item-146634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146634"><a href="/member/login" >登陆</a></li>
+<li id="menu-item-146634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146634"><a href="${el:host()}/member/login" >登陆</a></li>
 </ul>	</div></nav>
 	<header id="branding" class="group">
 		<h1 id="logo"><a href="/index_files/index.html" title="雷锋网" rel="home">雷锋网</a></h1>
@@ -117,8 +117,8 @@ $(document).ready(function() {
 	</header>
 	<nav id="nav_main" class="group"><div id="nav_main_x">
 		<ul id="menu-main" class="menu">
-<li id="menu-item-229187" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-229187 top-level-0"><a href="/">首页</a></li>
-<li id="menu-item-229189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-229189 top-level-1"><a href="/jobs/1">招聘</a></li>
+<li id="menu-item-229187" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-229187 top-level-0"><a href="${el:host()}/page/1">新闻</a></li>
+<li id="menu-item-229189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-229189 top-level-1"><a href="${el:host()}/jobs/1">招聘</a></li>
 </ul>		
 </nav>
      <div id="content" class="group">   
@@ -130,7 +130,7 @@ $(document).ready(function() {
 <div id='calendar'></div>
 </li>
 <li class="search">
-<div class="span4"><form action="/search" method="get" class="form form-search">
+<div class="span4"><form action="${el:host()}/search" method="get" class="form form-search">
         <div class="row-fluid hidden-phone">
             <div class="input-append ">
                 <button class="btn btn-primary span2 pull-right" style="width:18%"><i class="icon-search"></i> </button>
@@ -160,8 +160,8 @@ jQuery(function(){
 　</p>
 </footer>
 </div>
-<script src="/index_files/jquery.bxSlider.min.js"></script>
-<script src="/index_files/jquery.easing.1.3.js"></script>
+<script src="${el:host()}/index_files/jquery.bxSlider.min.js"></script>
+<script src="${el:host()}/index_files/jquery.easing.1.3.js"></script>
 <!--[if lt IE 7 ]>
 <script src="/wp-content/themes/leiphone/js/dd_belatedpng.js"></script>
 <script>DD_belatedPNG.fix(".png_fix,#logo a,#nav_main .menu li a:hover,#searchform,#search_submit,#sliders li .toggle,#sliders li .close,#slider .slider_nav .pager-link,.article_section header,.sidebar .list_freeapp ul li .price,.sidebar .widget ol li .item_change");

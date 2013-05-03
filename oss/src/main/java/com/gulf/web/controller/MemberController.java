@@ -34,6 +34,12 @@ public class MemberController {
     public void doLogin() {
     }
 
+    /**
+     * 学生首次登陆激活
+     * 
+     * @param form
+     * @return
+     */
     @At("/member/active")
     @Ok("raw")
     @POST
@@ -62,6 +68,14 @@ public class MemberController {
         return "1";
     }
 
+    /**
+     * ajax校验
+     * 
+     * @param id
+     * @param no
+     * @param name
+     * @return
+     */
     @At("/member/checkactive")
     @Ok("raw")
     @GET
@@ -79,6 +93,11 @@ public class MemberController {
 
     }
 
+    /**
+     * 公司信息提交
+     * 
+     * @param corporation
+     */
     @At("/member/company")
     @Ok("redirect:/")
     @POST

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.gulf.Init" %>
+<%@ include file="/WEB-INF/jsp/include/taglibs.jspf"%>
 <head>
 <style type="text/css">
   .form-signin {
@@ -37,7 +38,7 @@
   </ul>
   <div class="tab-content">
     <div class="tab-pane active"  id="1">
-       <form  action="/member/login" method="post">
+       <form  action="${el:host()}/member/login" method="post">
         <div class="control-group">
 				<label class="control-label" for="input01">学号</label>
 				<div class="controls">
@@ -54,7 +55,7 @@
       </form>
     </div>
     <div class="tab-pane" id="2">
-       <form  action="/member/active" method="post" id="form2">
+       <form  action="${el:host()}/member/active" method="post" id="form2">
         <div class="control-group">
 				<label class="control-label" for="input01">身份证号码</label>
 				<div class="controls">
@@ -89,7 +90,7 @@
       </form>
     </div>
    <div class="tab-pane" id="3">
-       <form  action="/member/company" method="post">
+       <form  action="${el:host()}/member/company" method="post">
         <div class="control-group">
 				<label class="control-label" for="input01">单位名称</label>
 				<div class="controls">
@@ -196,7 +197,7 @@ $(document).ready(function(){
 				alert("学生信息已经注册");
 			}else if(data=="1"){
 				alert("注册成功!");
-				window.location="/";
+				window.location="${el:host()}";
 			}
 			return false;
 		});

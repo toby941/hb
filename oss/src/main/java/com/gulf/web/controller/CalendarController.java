@@ -20,6 +20,7 @@ import org.nutz.mvc.annotation.Ok;
 
 import com.gulf.domain.JobFairs;
 import com.gulf.service.JobService;
+import com.gulf.util.ELFunctionUtils;
 
 @IocBean
 @InjectName
@@ -39,7 +40,7 @@ public class CalendarController {
             maps.put("title", job.getName());
             maps.put("start", job.getStartTime());
             maps.put("end", job.getEndTime());
-            maps.put("url", "/jobsview/" + job.getId());
+            maps.put("url", ELFunctionUtils.host() + "/jobsview/" + job.getId());
             jsonList.add(maps);
         }
         return JSONArray.fromObject(jsonList).toString();

@@ -6,10 +6,13 @@
 	color:#fff;
 	background:#61b0e9;
 }
+#post {
+height: 800px;
+}
 -->
 </style>
 	<div id="content_main">
-					<article class="post-234993 post type-post status-publish format-standard hentry category-a-eye tag-1006 tag-11003 tag-15553 tag-23874 tag-joy article_single" id="post-234993">
+					<article class="post-234993 post type-post status-publish format-standard hentry category-a-eye tag-1006 tag-11003 tag-15553 tag-23874 tag-joy article_single" id="post">
 			<header>
 				<h1 class="post_title"><c:out value="${obj.name}" /></h1>
 				<div class="post_metadata">编号：<c:out value="${obj.no}" /></div>
