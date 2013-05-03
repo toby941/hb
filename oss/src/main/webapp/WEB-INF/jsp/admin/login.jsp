@@ -54,23 +54,35 @@
       </form>
     </div>
     <div class="tab-pane" id="2">
-       <form  action="/member/active" method="post">
+       <form  action="/member/active" method="post" id="form2">
         <div class="control-group">
 				<label class="control-label" for="input01">身份证号码</label>
 				<div class="controls">
-				  <input type="text" class="input-block-level" placeholder="请出入18位身份证号码，不够用X补齐" id="username" name="username">
+				  <input type="text" class="input-block-level" required="required" placeholder="请出入18位身份证号码，不够用X补齐" id="username" name="username" > 
 				</div>
 			</div>
 			  <div class="control-group">
 				<label class="control-label" for="input01">学号</label>
 				<div class="controls">
-				 <input type="password" class="input-block-level" placeholder="你的学号" id="password" name="password">
+				 <input type="password" class="input-block-level" required="required" placeholder="你的学号" id="password" name="password">
 				</div>
 			</div>
 			 <div class="control-group">
 				<label class="control-label" for="input01">姓名</label>
 				<div class="controls">
-				 <input type="password" class="input-block-level" placeholder="你的姓名" id="password" name="password">
+				 <input type="password" class="input-block-level" required="required" placeholder="你的姓名" id="password" name="password">
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="input01">密码</label>
+				<div class="controls">
+				 <input type="password" class="input-block-level" required="required" placeholder="密码" id="password" name="password">
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="input01">密码确认</label>
+				<div class="controls">
+				 <input type="password" class="input-block-level" required="required" placeholder="密码确认" id="password" name="passwordrepeat">
 				</div>
 			</div>
         <button class="btn btn-large btn-primary" type="submit">激活</button>
@@ -79,20 +91,119 @@
    <div class="tab-pane" id="3">
        <form  action="/member/company" method="post">
         <div class="control-group">
-				<label class="control-label" for="input01">企业登记号</label>
+				<label class="control-label" for="input01">单位名称</label>
 				<div class="controls">
-				  <input type="text" class="input-block-level" placeholder="用户名" id="username" name="username">
+				  <input type="text" class="input-block-level" placeholder="单位名称"  name="name">
 				</div>
 			</div>
 			  <div class="control-group">
-				<label class="control-label" for="input01">学号</label>
+				<label class="control-label" for="input01">所属省</label>
 				<div class="controls">
-				 <input type="password" class="input-block-level" placeholder="口令" id="password" name="password">
+				  <input type="text" class="input-block-level"  name="province">
 				</div>
 			</div>
-        <button class="btn btn-large btn-primary" type="submit">登录</button>
+			  <div class="control-group">
+				<label class="control-label" for="input01">所属市</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="city">
+				</div>
+			</div>
+			  <div class="control-group">
+				<label class="control-label" for="input01">所属行业</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="industry">
+				</div>
+			</div>
+			  <div class="control-group">
+				<label class="control-label" for="input01">邮编</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="zip">
+				</div>
+			</div>
+			  <div class="control-group">
+				<label class="control-label" for="input01">联系人</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="contact">
+				</div>
+			</div>
+			
+			
+			 <div class="control-group">
+				<label class="control-label" for="input01">联系地址</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="addr">
+				</div>
+			</div>
+			 <div class="control-group">
+				<label class="control-label" for="input01">固定电话</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="call">
+				</div>
+			</div>
+			 <div class="control-group">
+				<label class="control-label" for="input01">手机</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="phone">
+				</div>
+			</div>
+			 <div class="control-group">
+				<label class="control-label" for="input01">传真</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="fax">
+				</div>
+			</div>
+			 <div class="control-group">
+				<label class="control-label" for="input01">EMAIL</label>
+				<div class="controls">
+				  <input type="email" class="input-block-level"  name="email">
+				</div>
+			</div>
+			 <div class="control-group">
+				<label class="control-label" for="input01">联系人</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="username">
+				</div>
+			</div>
+			 <div class="control-group">
+				<label class="control-label" for="input01">单位简介</label>
+				<div class="controls">
+				<textarea rows="10" cols="10" name="info"></textarea>
+				</div>
+			</div>
+			 <div class="control-group">
+				<label class="control-label" for="input01">营业执照号</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="no">
+				</div>
+			</div>
+			 <div class="control-group">
+				<label class="control-label" for="input01">主页</label>
+				<div class="controls">
+				  <input type="text" class="input-block-level"  name="site">
+				</div>
+			</div>
+        <button class="btn btn-large btn-primary" type="submit">单位注册</button>
       </form>
     </div>
     </div>
- 
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#form2").submit(function(){
+		$.post("/member/active", $("#form2").serialize(),function(data){
+			if(data=="-1"){
+				alert("学生信息输入错误")；
+			}else if(data=="0"){
+				alert("学生信息已经注册");
+			}else if(data=="1"){
+				alert("注册成功!");
+				window.location="/";
+			}
+			return false;
+		});
+		
+	});
+	
+});
+
+</script>
 </body>

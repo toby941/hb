@@ -50,9 +50,9 @@ public class MemberService extends BaseService {
      * @param password
      * @return
      */
-    public boolean register(String idCardNo, String password) {
+    public boolean register(String idCardNo, String password, String name) {
         Student s = findStudent(idCardNo);
-        if (s == null) {
+        if (s == null || !s.getName().equals(name)) {
             return false;
         }
         String no = s.getNo();

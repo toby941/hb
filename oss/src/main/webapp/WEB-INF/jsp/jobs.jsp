@@ -9,10 +9,9 @@
 -->
 </style>
 	<div id="content_main">
-	 <c:forEach items="${obj}" var="jobs">
+	 <c:forEach items="${obj.list}" var="jobs">
 	 <article class=" post type-post status-publish format-standard hentry category-a-eye tag-rom tag-rom article"  data-posttime="2013-03-28 10:16:55">
 			<header>
-				<a href="#" rel="bookmark" title="搞个锤子！咱们天朝的国产ROMEN！" target="_blank"><img src="/index_files/02-11-26-25-150x150.png" alt="" data-pinit="registered"></a>
 				<h2 class="post_title">
 				<c:out value="${jobs.name}" />
 				</h2>
@@ -22,13 +21,13 @@
 			</div>
 			<footer class="post_meta">
 				<span>by <c:out value="${jobs.unit}" />  发布时间: <c:out value="${jobs.startTime}" />  结束时间：<c:out value="${jobs.endTime}" />  </span>
-					<a href="/view/${jobs.id}"  title="<c:out value="${jobs.name}" />" class="more" target="_blank"><img src="/index_files/readmore.png" alt="Read more"></a>
+					<a href="/jobsview/${jobs.id}"  title="<c:out value="${jobs.name}" />" class="more" target="_blank"><img src="/index_files/readmore.png" alt="Read more"></a>
 				<div class="clear"></div>
 			</footer>			
 		</article>
 	 </c:forEach>
 		<div class="navigation group">
 			<div class="wp-pagenavi">
-			<oss:pagination pageSize="30" href="/page/PAGENUM"  totalRecord="167" currentPage="2"></oss:pagination>		
+			<oss:pagination pageSize="30" href="/jobs/PAGENUM"  totalRecord="${obj.count}" currentPage="${obj.page}"></oss:pagination>		
 </div>		</div>
 	</div>

@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="pragram" content="no-cache">
-<title>我是网页title</title>
+<title>南京师范大学</title>
 <meta name="viewport" content="width=1024">
 <meta name="description" content="toby941">
 <meta property="og:type" content="webpage">
@@ -24,9 +24,8 @@
 <script src="/wp-content/themes/leiphone/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <link rel="stylesheet" id="wp-polls-css" href="/index_files/polls-css.css" type="text/css" media="all">
-<link rel="stylesheet" href="http://arshaw.com/js/fullcalendar-1.6.0/demos/cupertino/theme.css">
-<link href="http://arshaw.com/js/fullcalendar-1.6.0/fullcalendar/fullcalendar.css" rel="stylesheet">
-<link href="http://arshaw.com/js/fullcalendar-1.6.0/fullcalendar/fullcalendar.print.css" rel="stylesheet" media="print">
+<link rel="stylesheet" href="/style/fullcalendar_theme.css">
+<link href="/style/fullcalendar.css" rel="stylesheet">
 <script src='/index_files/jquery-1.9.1.min.js'></script>
 <script src='/index_files/jquery-ui-1.10.2.custom.min.js'></script>
 <script src='/index_files/fullcalendar.min.js'></script>
@@ -51,52 +50,7 @@ $(document).ready(function() {
 		buttonText:{ today:'今天', month:'月', week:'周', day:'天'},
 		monthNames:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
 		monthNamesShort:['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
-		events: [
-			{
-				title: '全天事件',
-				start: new Date(y, m, 1)
-			},
-			{
-				title: '长期事件',
-				start: new Date(y, m, d-5),
-				end: new Date(y, m, d-2)
-			},
-			{
-				id: 999,
-				title: '重复事件',
-				start: new Date(y, m, d-3, 16, 0),
-				allDay: false
-			},
-			{
-				id: 999,
-				title: '重复事件',
-				start: new Date(y, m, d+4, 16, 0),
-				allDay: false
-			},
-			{
-				title: '会议',
-				start: new Date(y, m, d, 10, 30),
-				allDay: false
-			},
-			{
-				title: '午餐',
-				start: new Date(y, m, d, 12, 0),
-				end: new Date(y, m, d, 14, 0),
-				allDay: false
-			},
-			{
-				title: '生日聚会',
-				start: new Date(y, m, d+1, 19, 0),
-				end: new Date(y, m, d+1, 22, 30),
-				allDay: false
-			},
-			{
-				title: '点击到google',
-				start: new Date(y, m, 28),
-				end: new Date(y, m, 29),
-				url: 'http://google.com/'
-			}
-		]
+		events: '/calendar'
 	});
 	
 });
@@ -176,11 +130,11 @@ $(document).ready(function() {
 <div id='calendar'></div>
 </li>
 <li class="search">
-<div class="span4"><form action="/search/" method="get" class="form form-search">
+<div class="span4"><form action="/search" method="get" class="form form-search">
         <div class="row-fluid hidden-phone">
             <div class="input-append ">
                 <button class="btn btn-primary span2 pull-right" style="width:18%"><i class="icon-search"></i> </button>
-                <input type="text" name="q" id="avnpc-form-searchform-q" class="search-query span10  validate[required]" placeholder="搜索" value="">        
+                <input type="text" name="w" id="avnpc-form-searchform-q" class="search-query span10  validate[required]" placeholder="搜索"   />        
             </div>
         </div>
     </form></div>
