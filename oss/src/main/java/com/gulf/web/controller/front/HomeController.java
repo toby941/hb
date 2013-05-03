@@ -1,11 +1,9 @@
 /*
  * Copyright 2013 5idea gulf team
  */
-package com.gulf.web.controller;
+package com.gulf.web.controller.front;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.nutz.ioc.annotation.InjectName;
 import org.nutz.ioc.loader.annotation.Inject;
@@ -35,44 +33,23 @@ public class HomeController {
 
     @At("/")
     @Ok("jsp:jsp.index")
-    public Map<String, Object> list() {
-        List<News> list = newsService.getList(1);
-        Integer count = newsService.getTotalCount();
-        Map<String, Object> obj = new HashMap<String, Object>();
-        obj.put("list", list);
-        obj.put("count", count);
-        obj.put("page", 1);
-        return obj;
+    public List<News> list() {
+        List<News> list = newsService.getList(0);
+        return list;
     }
 
     @At("/page/?")
     @Ok("jsp:jsp.index")
-    public Map<String, Object> page(Integer pageNumber) {
-        if (pageNumber == null) {
-            pageNumber = 1;
-        }
+    public List<News> page(Integer pageNumber) {
         List<News> list = newsService.getList(pageNumber);
-        Integer count = newsService.getTotalCount();
-        Map<String, Object> obj = new HashMap<String, Object>();
-        obj.put("list", list);
-        obj.put("count", count);
-        obj.put("page", pageNumber);
-        return obj;
+        return list;
     }
 
     @At("/jobs/?")
     @Ok("jsp:jsp.jobs")
-    public Map<String, Object> jobs(Integer pageNumber) {
-        if (pageNumber == null) {
-            pageNumber = 1;
-        }
+    public List<JobFairs> jobs(Integer pageNumber) {
         List<JobFairs> list = jobService.getList(pageNumber);
-        Integer count = jobService.getTotalCount();
-        Map<String, Object> obj = new HashMap<String, Object>();
-        obj.put("list", list);
-        obj.put("count", count);
-        obj.put("page", pageNumber);
-        return obj;
+        return list;
     }
 
     @At("/jobsview/?")
@@ -87,9 +64,6 @@ public class HomeController {
     @GET
     public News view(int id) {
         News news = newsService.getNews(id);
-        if (news != null) {
-            newsService.updateClickCount(news);
-        }
         return news;
     }
 
